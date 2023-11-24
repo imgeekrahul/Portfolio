@@ -93,7 +93,7 @@ const Footer = () => {
           </div>
 
           <div>
-            <p className='text-gray-400 text-[14px] '>Copyright {year} developed by Rahul Ranjan - All right reserved.</p>
+            <p className='text-gray-400 text-[14px] '>Copyright {year} made with ❤️ by Rahul Ranjan - All right reserved.</p>
           </div>
 
         </div>
