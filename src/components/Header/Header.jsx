@@ -37,7 +37,7 @@ const Header = () => {
     const toggleMenu = () => menuRef.current.classList.toggle('show__menu')
 
     const whatsappHandle = () => {
-        window.open("//api.whatsapp.com/send?phone=917050125282&text=Hii There", "_blank")
+        window.open("//api.whatsapp.com/send?phone=917050125182&text=Hii There", "_blank")
     }
 
   return (
@@ -65,7 +65,7 @@ const Header = () => {
                             <a onClick={handleClick} className='text-smallTextColor font-[600]' href="#experience">Experience</a>
                         </li>
                         <li>
-                            <a onClick={handleClick} className='text-smallTextColor font-[600]' href="#portfolio">Projects</a>
+                            <a onClick={handleClick} className='text-smallTextColor font-[600]' href="#project">Projects</a>
                         </li>
                         <li>
                             <a onClick={handleClick} className='text-smallTextColor font-[600]' href="#contact">Contact</a>
