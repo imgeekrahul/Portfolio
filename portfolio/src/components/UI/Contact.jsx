@@ -11,7 +11,6 @@ const Contact = () => {
     const [message, setMessage] = useState("");
 
     const handleSubmit = (e) => {
-        console.log("Handle Submit ",e)
         e.preventDefault();
         const data = {
             name: name,
@@ -23,7 +22,7 @@ const Contact = () => {
             axios.post(`${API_REQUEST}/add_request`, data)
             .then(resData => {
                 alert(`Thanks `+ resData.data.name + " !! I'll get back to you soon !!")
-                location.reload();
+                window.location.reload(); 
             })
             .catch(err => {
                 console.log(err);
