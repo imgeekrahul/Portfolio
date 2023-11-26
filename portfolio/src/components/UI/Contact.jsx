@@ -23,6 +23,7 @@ const Contact = () => {
             axios.post(`${API_REQUEST}/add_request`, data)
             .then(resData => {
                 alert(`Thanks `+ resData.data.name + " !! I'll get back to you soon !!")
+                window.reload();
             })
             .catch(err => {
                 console.log(err);
