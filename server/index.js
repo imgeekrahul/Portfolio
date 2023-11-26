@@ -10,7 +10,9 @@ app.use(express.json({
 }));
 
 app.use(cors({
-    origin: 'https://portfolio-server-rahul.vercel.app'
+    origin: 'https://portfolio-server-rahul.vercel.app',
+    methods: ["POST"],
+    credentials: true,
 }));
 
 const PORT = 8080;
