@@ -1,7 +1,6 @@
 const express = require("express");
 const mongoose = require("mongoose");
 const cors = require("cors");
-const portFolio = require("./model/portfolio");
 
 const app = express();
 
@@ -34,30 +33,6 @@ const connectDB = async () => {
 connectDB();
 
 app.use("/", require('./server'));
-
-app.post("/add_request", async (req, res) => {
-    try {
-        res.json("Hii");
-        // const name = req.body.name;
-        // const email = req.body.email;
-        // const subject = req.body.subject;
-        // const message = req.body.message;
-    
-        // const data = {
-        //     name: name,
-        //     email: email,
-        //     subject: subject,
-        //     message: message
-        // }
-
-        // await portFolio.create(data);
-        // res.status(201).json(data);
-    } catch(err) {
-        console.log(err);
-    }
-})
-
-
 
 app.listen(PORT, () => {
     console.log("Server has started on PORT: ", PORT);
