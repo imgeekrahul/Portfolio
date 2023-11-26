@@ -10,8 +10,12 @@ app.use(express.json({
 }));
 
 app.use(cors({
-    origin: 'https://portfolio-server-rahul.vercel.app',
+    origin: [
+        'https://portfolio-server-rahul.vercel.app',
+        'http://localhost:3000'
+    ],
     methods: ["POST"],
+    optionSuccessStatus: 200,
     credentials: true,
 }));
 
