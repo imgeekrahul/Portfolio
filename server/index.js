@@ -16,7 +16,7 @@ app.use(cors({
     ],
     methods: ["POST"],
     optionSuccessStatus: 200,
-    credentials: true,
+    credentials: false,
 }));
 
 const PORT = 8080;
