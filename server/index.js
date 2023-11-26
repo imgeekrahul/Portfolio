@@ -8,16 +8,7 @@ app.use(express.json({
     extended: true
 }));
 
-app.use(cors({
-    origin: [
-        'http://rahul-ranjan.vercel.app',
-        'https://rahulranjan.vercel.app',
-        'http://localhost:3000'
-    ],
-    methods: ["POST"],
-    optionSuccessStatus: 200,
-    credentials: false,
-}));
+app.use(cors());
 
 const PORT = 8080;
 
