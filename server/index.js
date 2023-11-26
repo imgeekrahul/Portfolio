@@ -33,9 +33,7 @@ const connectDB = async () => {
 
 connectDB();
 
-app.use("/", (req, res) => {
-    res.status(200).json("Server is running");
-})
+
 
 app.post("/add_request", async (req, res) => {
     try {
@@ -59,6 +57,9 @@ app.post("/add_request", async (req, res) => {
     }
 })
 
+app.get("/", (req, res) => {
+    res.status(200).json("Server is running");
+})
 
 app.listen(PORT, () => {
     console.log("Server has started on PORT: ", PORT);
