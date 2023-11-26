@@ -10,7 +10,7 @@ app.use(express.json({
 
 app.use(cors({
     origin: [
-        'https://portfolio-server-rahul.vercel.app',
+        'https://rahulranjan.vercel.app',
         'http://localhost:3000'
     ],
     methods: ["POST"],
