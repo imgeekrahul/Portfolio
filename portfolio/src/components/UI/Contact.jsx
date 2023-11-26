@@ -11,7 +11,9 @@ const Contact = () => {
     const [message, setMessage] = useState("");
 
     const handleSubmit = (e) => {
+        console.log("Handle Submit", e);
         e.preventDefault();
+
         const data = {
             name: name,
             email: email,
