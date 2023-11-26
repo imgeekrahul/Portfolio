@@ -9,7 +9,9 @@ app.use(express.json({
     extended: true
 }));
 
-app.use(cors());
+app.use(cors({
+    origin: 'https://portfolio-server-rahul.vercel.app'
+}));
 
 const PORT = 8080;
 
@@ -38,7 +40,7 @@ app.post("/add_request", async (req, res) => {
             subject: subject,
             message: message
         }
-        
+
         await portFolio.create(data);
         res.status(201).json(data);
     } catch(err) {
