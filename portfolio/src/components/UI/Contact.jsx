@@ -3,7 +3,7 @@ import axios from 'axios';
 
 const API_REQUEST = process.env.REACT_APP_API;
 
-const Contact = () => {
+const Contact = () => { 
     
     const [name, setName] = useState("");
     const [email, setEmail] = useState("");
