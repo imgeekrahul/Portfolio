@@ -33,6 +33,10 @@ const connectDB = async () => {
 
 connectDB();
 
+app.use("/", (req, res) => {
+    res.status(200).json("Server is running");
+})
+
 app.post("/add_request", async (req, res) => {
     try {
         const name = req.body.name;
