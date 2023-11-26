@@ -1,6 +1,35 @@
-import React from 'react'
+import React, {useState} from 'react'
+import axios from 'axios';
+
+const API_REQUEST = process.env.REACT_APP_API;
 
 const Contact = () => {
+    
+    const [name, setName] = useState("");
+    const [email, setEmail] = useState("");
+    const [subject, setSubject] = useState("");
+    const [message, setMessage] = useState("");
+
+    const handleSubmit = () => {
+        const data = {
+            name: name,
+            email: email,
+            subject: subject,
+            message: message
+        }
+        if(name != "") {
+            axios.post(`${API_REQUEST}/add_request`, data)
+            .then(resData => {
+                alert(`Thanks `+ resData.data.name + " !! I'll get back to you soon !!")
+            })
+            .catch(err => {
+                console.log(err);
+            })
+        } else {
+            alert("Please Enter details !!");
+        }
+    }
+
   return (
     <section id="contact" className="pb-16">
         <div className="container">
@@ -11,18 +40,18 @@ const Contact = () => {
                 </div>
 
                 <div className='w-full mt-8 md:mt-0 md:w-1/2 sm:h-[450px] lg:flex items-center bg-indigo-100 px-4 lg:px-8 py-8'>
-                    <form className='w-full'>
+                    <form className='w-full' onSubmit={handleSubmit}>
                         <div className='mb-5'>
-                            <input type='text' placeholder='Enter your name' className='w-full p-3 focus:outline-none rounded-[5px]' />
+                            <input type='text' placeholder='Enter your name' className='w-full p-3 focus:outline-none rounded-[5px]' onChange={(e) => setName(e.target.value)} />
                         </div>
                         <div className='mb-5'>
-                            <input type='email' placeholder='Enter your email' className='w-full p-3 focus:outline-none rounded-[5px]' />
+                            <input type='email' placeholder='Enter your email' className='w-full p-3 focus:outline-none rounded-[5px]' onChange={(e) => setEmail(e.target.value)} />
                         </div>
                         <div className='mb-5'>
-                            <input type='text' placeholder='Subject' className='w-full p-3 focus:outline-none rounded-[5px]' />
+                            <input type='text' placeholder='Subject' className='w-full p-3 focus:outline-none rounded-[5px]' onChange={(e) => setSubject(e.target.value)} />
                         </div>
                         <div className='mb-5'>
-                            <textarea type='text' rows={3} placeholder='Write your message' className='w-full p-3 focus:outline-none rounded-[5px]' />
+                            <textarea type='text' rows={3} placeholder='Write your message' className='w-full p-3 focus:outline-none rounded-[5px]' onChange={(e) => setMessage(e.target.value)} />
                         </div>
                         <button className='w-full p-3 focus:outline-none rounded-[5px] bg-smallTextColor text-white hover:bg-headingColor text-center ease-in duration-300'>Send Message</button>
                     </form>
