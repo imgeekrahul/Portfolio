@@ -1,6 +1,7 @@
 import React from 'react'
 import HeroImg from '../../assets/images/rahulImage.jpeg';
 import Resume from '../../assets/document/Rahul_Resume.pdf';
+import KenUpdatedResume from '../../assets/document/Rahul_Tech_Resume.pdf';
 // import CountUp from 'react-countup'
 
 const Hero = () => {
@@ -31,15 +32,15 @@ const Hero = () => {
                         data-aos-delay='200'
                         className='flex items-center gap-6 mt-7'
                     >
-                        <a href={Resume} target="_blank"> 
+                        <a href={KenUpdatedResume} target="_blank"> 
                             <button className='bg-primaryColor text-white font-[500] flex items-center gap-2
                                 hover:bg-smallTextColor ease-in duration-300 py-2 px-4 rounded-[8px]'
                             >
                             <i class="ri-article-line"></i> Resume
                             </button>
                         </a>
-                        <a href="https://topmate.io/rahul_ranjan1" target="_blank" className='text-smallTextColor font-[600] text-[16px] border-b border-solid border-smallTextColor'>
-                            Book 1:1 call
+                        <a href="https://calendly.com/rahul-ranjan11365/30min" target="_blank" className='text-smallTextColor font-[600] text-[16px] border-b border-solid border-smallTextColor'>
+                            Schedule Meeting
                         </a>
                     </div>
                     <p 
