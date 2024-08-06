@@ -32,7 +32,7 @@ const Hero = () => {
                         data-aos-delay='200'
                         className='flex items-center gap-6 mt-7'
                     >
-                        <a href={KenUpdatedResume} target="_blank"> 
+                        <a href={Resume} target="_blank"> 
                             <button className='bg-primaryColor text-white font-[500] flex items-center gap-2
                                 hover:bg-smallTextColor ease-in duration-300 py-2 px-4 rounded-[8px]'
                             >
