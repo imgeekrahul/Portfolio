@@ -1,7 +1,6 @@
 import React from 'react'
 import HeroImg from '../../assets/images/rahulImage.jpeg';
 import Resume from '../../assets/document/Rahul_Resume.pdf';
-import KenUpdatedResume from '../../assets/document/Rahul_Tech_Resume.pdf';
 // import CountUp from 'react-countup'
 
 const Hero = () => {
